@@ -1,0 +1,38 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+  <label for="firstName">Prénom:</label>
+  <input id="firstName" type="text" formControlName="firstName" />
+  <div *ngIf="profileForm.get('firstName')?.invalid && profileForm.get('firstName')?.touched">
+    Le prénom est requis.
+  </div>
+
+  <label for="lastName">Nom:</label>
+  <input id="lastName" type="text" formControlName="lastName" />
+  <div *ngIf="profileForm.get('lastName')?.invalid && profileForm.get('lastName')?.touched">
+    Le nom est requis.
+  </div>
+
+  <label for="age">Âge:</label>
+  <input id="age" type="text" formControlName="age" />
+
+  <label for="hideEmail">
+    <input id="hideEmail" type="checkbox" (change)="toggleEmailVisibility()" />
+    Cacher Email
+  </label>
+
+  <div *ngIf="isEmailVisible">
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email" />
+    <div *ngIf="profileForm.get('email')?.invalid && profileForm.get('email')?.touched">
+      L'email est requis et doit contenir un arobase.
+    </div>
+  </div>
+
+  <label for="commentary">Commentaire:</label>
+  <textarea id="commentary" formControlName="commentary"></textarea>
+  <div *ngIf="profileForm.get('commentary')?.invalid && profileForm.get('commentary')?.touched">
+    Le commentaire est requis.
+  </div>
+
+  <button type="submit" [disabled]="!profileForm.valid">Envoyer</button>
+</form>
