@@ -2,3 +2,7 @@ a:hover {
   color: blue;
   text-decoration: underline;
 }
+
+.liste {
+  text-align: center;
+}

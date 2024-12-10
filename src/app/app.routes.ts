@@ -16,5 +16,5 @@ export const routes: Routes = [
   { path: 'liste', component: ListeComponent },
   { path: 'contact', component: ContactComponent },
   { path: '', redirectTo: '/accueil', pathMatch: 'full' }, // Redirection vers /accueil pour URL vide
-  { path: '**', redirectTo: '/accueil' } // Redirection des URL inconnues
+  { path: '**', component: AccueilComponent } // Redirection des URL inconnues
 ];
