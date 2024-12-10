@@ -1,7 +1,13 @@
 .navbar {
-  background-color: #333;
+  background-color: #03263c;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 100%;
 }
 
 .nav-list {
@@ -27,8 +33,9 @@
 }
 
 .nav-link:hover {
-  background-color: #555;
-  transform: scale(1.1);
+  background-color: #ffffff;
+  color: #03263c;
+  transform: scale(2.1);
 }
 
 .nav-link.active {
