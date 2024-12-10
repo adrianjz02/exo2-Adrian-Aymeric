@@ -1,14 +1,16 @@
-<div style="text-align: center; margin-top: 50px;">
+<div class="gestion-container">
   <ng-container *ngIf="formData; else notFound">
-    <h2>Dernières informations du formulaire</h2>
-    <p>Prénom: {{ formData.firstName }}</p>
-    <p>Nom:{{ formData.lastName }}</p>
-    <p>Âge: {{ formData.age }}</p>
-    <p *ngIf="formData.email">Email: {{ formData.email }}</p>
-    <p>Commentaire: {{ formData.commentary }}</p>
+    <h2 class="form-title">Dernières informations du formulaire</h2>
+    <div class="form-data">
+      <p><strong>Prénom :</strong> {{ formData.firstName }}</p>
+      <p><strong>Nom :</strong> {{ formData.lastName }}</p>
+      <p><strong>Âge :</strong> {{ formData.age }}</p>
+      <p *ngIf="formData.email"><strong>Email :</strong> {{ formData.email }}</p>
+      <p><strong>Commentaire :</strong> {{ formData.commentary }}</p>
+    </div>
   </ng-container>
 
   <ng-template #notFound>
-    <app-erreur></app-erreur>
+    <app-erreur class="not-found"></app-erreur>
   </ng-template>
 </div>

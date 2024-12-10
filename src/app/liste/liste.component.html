@@ -1,12 +1,12 @@
-<div class = "liste">
-  <ul>
-    <ul *ngFor="let film of films">
-      <a (click)="onSelectFilm(film)">{{ film.title }}</a>
-    </ul>
+<div class="liste">
+  <ul class="film-list">
+    <li *ngFor="let film of films" class="film-item">
+      <a (click)="onSelectFilm(film)" class="film-link">{{ film.title }}</a>
+    </li>
   </ul>
 
-  <div *ngIf="selectedFilm">
-    <h2>{{ selectedFilm.title }}</h2>
-    <img [src]="selectedFilm.poster" alt="{{ selectedFilm.title }}" />
+  <div *ngIf="selectedFilm" class="film-details">
+    <h2 class="film-title">{{ selectedFilm.title }}</h2>
+    <img [src]="selectedFilm.poster" alt="{{ selectedFilm.title }}" class="film-poster" />
   </div>
 </div>

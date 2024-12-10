@@ -1,8 +1,56 @@
-a:hover {
-  color: blue;
-  text-decoration: underline;
-}
-
+/* Style général pour la liste */
 .liste {
   text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Liste des films */
+.film-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.film-item {
+  margin: 10px 0;
+}
+
+.film-link {
+  text-decoration: none;
+  color: #007BFF;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.film-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+/* Détails du film sélectionné */
+.film-details {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  display: inline-block;
+  text-align: center;
+  width: 300px;
+}
+
+.film-title {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.film-poster {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
