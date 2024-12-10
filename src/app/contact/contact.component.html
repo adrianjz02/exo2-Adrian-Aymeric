@@ -22,7 +22,7 @@
 
   <div *ngIf="isEmailVisible">
     <label for="email">Email:</label>
-    <input id="email" type="email" formControlName="email" />
+    <input id="email" type="email" formControlName="email">
     <div *ngIf="profileForm.get('email')?.invalid && profileForm.get('email')?.touched">
       L'email est requis et doit contenir un arobase.
     </div>

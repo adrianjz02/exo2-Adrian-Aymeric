@@ -1,11 +1,14 @@
-<div class="gestion">
-  <h1>Page Gestion</h1>
-  <div *ngIf="formData; else notFound">
-    <p><strong>Nom:</strong> {{ formData?.name }}</p>
-    <p><strong>Email:</strong> {{ formData?.email }}</p>
-    <p><strong>Message:</strong> {{ formData?.message }}</p>
-  </div>
+<div style="text-align: center; margin-top: 50px;">
+  <ng-container *ngIf="formData; else notFound">
+    <h2>Dernières informations du formulaire</h2>
+    <p>Prénom: {{ formData.firstName }}</p>
+    <p>Nom:{{ formData.lastName }}</p>
+    <p>Âge: {{ formData.age }}</p>
+    <p *ngIf="formData.email">Email: {{ formData.email }}</p>
+    <p>Commentaire: {{ formData.commentary }}</p>
+  </ng-container>
+
   <ng-template #notFound>
-    <h2>404 - Aucun formulaire envoyé.</h2>
+    <app-erreur></app-erreur>
   </ng-template>
 </div>
