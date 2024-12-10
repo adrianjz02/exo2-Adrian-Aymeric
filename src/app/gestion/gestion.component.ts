@@ -20,7 +20,6 @@ export class GestionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Récupération des données sauvegardées
     this.formData = this.formDataService.getFormData();
   }
 }

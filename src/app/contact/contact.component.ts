@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NgIf} from '@angular/common';
-import {Router, RouterLink} from '@angular/router';
+import {Router} from '@angular/router';
 import {FormServiceService} from '../service/form-service.service';
 
 @Component({
@@ -10,7 +10,6 @@ import {FormServiceService} from '../service/form-service.service';
     ReactiveFormsModule,
     FormsModule,
     NgIf,
-    RouterLink
   ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
@@ -40,19 +39,17 @@ export class ContactComponent {
       ]);
     } else {
       this.profileForm.get('email')?.clearValidators();
+      this.profileForm.get('email')?.reset();
     }
     this.profileForm.get('email')?.updateValueAndValidity();
   }
 
   onSubmit() {
     if (this.profileForm.valid) {
-      // Sauvegarde des données dans le service
       this.formDataService.saveFormData(this.profileForm.value);
 
-      // Afficher une alerte
       alert('Le formulaire est valide');
 
-      // Redirection vers la page d'accueil
       this.router.navigate(['/accueil']);
     } else {
       alert('Le formulaire est invalide. Veuillez vérifier les champs.');

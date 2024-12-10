@@ -1,11 +1,11 @@
 .image-container {
   display: flex;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center;    /* Centre verticalement */
-  height: 100vh;          /* Prend toute la hauteur de la page */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .image-container img {
-  max-width: 100%; /* Adapte l'image à la largeur de l'écran */
-  height: auto;    /* Maintient les proportions */
+  max-width: 100%;
+  height: auto;
 }
