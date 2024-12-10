@@ -1,1 +1,15 @@
-<p>gestion works!</p>
+<div class="gestion-container">
+  <div class="content" *ngIf="formData; else notFound">
+    <h1>Dernier Formulaire Envoyé</h1>
+    <p><strong>Nom:</strong> {{ formData.name }}</p>
+    <p><strong>Email:</strong> {{ formData.email }}</p>
+    <p><strong>Message:</strong> {{ formData.message }}</p>
+  </div>
+
+  <ng-template #notFound>
+    <div class="not-found">
+      <h1>404 Not Found</h1>
+      <img src="assets/404.png" alt="404 Not Found" />
+    </div>
+  </ng-template>
+</div>

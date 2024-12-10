@@ -1,0 +1,24 @@
+.gestion-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.not-found {
+  text-align: center;
+}
+
+.not-found img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
