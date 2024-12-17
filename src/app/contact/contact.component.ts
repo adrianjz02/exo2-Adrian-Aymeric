@@ -19,7 +19,7 @@ export class ContactComponent {
   public profileForm = new FormGroup({
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
-    age: new FormControl('', Validators.required),
+    age: new FormControl('', [Validators.required, Validators.min(0), Validators.max(120)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     commentary: new FormControl('', Validators.required),
   });

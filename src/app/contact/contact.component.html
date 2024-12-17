@@ -1,7 +1,7 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="contact-form">
   <div class="form-group">
     <label for="firstName">Prénom:</label>
-    <input id="firstName" type="text" formControlName="firstName" />
+    <input id="firstName" type="text" formControlName="firstName"/>
     <div class="error-message" *ngIf="profileForm.get('firstName')?.invalid && profileForm.get('firstName')?.touched">
       Le prénom est requis.
     </div>
@@ -9,7 +9,7 @@
 
   <div class="form-group">
     <label for="lastName">Nom:</label>
-    <input id="lastName" type="text" formControlName="lastName" />
+    <input id="lastName" type="text" formControlName="lastName"/>
     <div class="error-message" *ngIf="profileForm.get('lastName')?.invalid && profileForm.get('lastName')?.touched">
       Le nom est requis.
     </div>
@@ -17,12 +17,16 @@
 
   <div class="form-group">
     <label for="age">Âge:</label>
-    <input id="age" type="text" formControlName="age" />
+    <input id="age" type="number" formControlName="age"/>
+    <div class="error-message" *ngIf="profileForm.get('age')?.invalid && profileForm.get('age')?.touched">
+      L'âge doit être un nombre valide.
+    </div>
   </div>
+
 
   <div class="form-group" *ngIf="isEmailVisible">
     <label for="email">Email:</label>
-    <input id="email" type="email" formControlName="email" />
+    <input id="email" type="email" formControlName="email"/>
     <div class="error-message" *ngIf="profileForm.get('email')?.invalid && profileForm.get('email')?.touched">
       L'email est requis et doit contenir un arobase.
     </div>
@@ -30,7 +34,7 @@
 
   <div class="form-group checkbox-group">
     <label for="hideEmail">
-      <input id="hideEmail" type="checkbox" (change)="toggleEmailVisibility()" />
+      <input id="hideEmail" type="checkbox" (change)="toggleEmailVisibility()"/>
       Cacher Email
     </label>
   </div>
